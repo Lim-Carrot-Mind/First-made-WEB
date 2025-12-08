@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>함수-매개변수,인수-리턴 연습</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Function</h1>
+
+        <h2>Basic</h2>
+         <ul>
+            <script>
+                function two() 
+                {
+                    document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+                }
+                document.write('<li>1</li>');
+                two();
+                document.write('<li>3</li>');
+                two();
+            </script>    
+         </ul>
+
+        <h2>Parameter & Argument</h2>
+        <script>
+            function onePlusone()
+            {
+            document.write(1+1+'<br>');
+            }
+
+            onePlusone(); //onePlusone() 이함수는 언제나 똑같이 동작하는 함수...입력값 출력값 고정!
+
+
+            function sum(left,right)
+            {
+                document.write(left+right+'<br>');
+            }
+
+
+            function sumColorRed(left,right)
+            {
+                document.write('<div style="color:red;">'+left+right+'</div><br>');
+            }
+
+
+            sum(2,3);//sum(left,right) 이함수는 입력하는 인자에 따라 출력값이 변동!
+            sum(3,4);
+
+            sumColorRed(3,4)
+        </script>
+
+        <h2>Return</h2>
+
+        <script>
+            function sum2(left,right)
+            {
+                return left+right;
+            } 
+                document.write( sum(2,3)+'<br>');
+                document.write('<div style="color:red;">'+sum2(2,3)+'</div><br>');
+                document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div><br>');
+        </script>
+        
+    </body>
+    
+</html>
