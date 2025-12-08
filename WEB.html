@@ -7,23 +7,16 @@
         <meta charset="UTF-8">
 
         <link rel="stylesheet" href="style.css"/>
-    </head>
 
-    <body>
-
-        <h1><a href="WEB.html" target="_blank">WEB</a></h1>
-
-    <div ID="grid">
-
-        <div class="class1">
-
-       <input type="button" value="night" onclick="
-       const target = document.querySelector('body') ;
-                if(this.value === 'night')
+        <script>
+             function NightDayHandler(self) 
+             {
+                 const target = document.querySelector('body') ;
+                if(self.value === 'night')
                     {
                     target.style.backgroundColor='black';
                     target.style.color='white';
-                    this.value='day';
+                    self.value='day';
 
                     var alist=document.querySelectorAll('a');
                     var i=0;
@@ -36,7 +29,7 @@
                     {
                     target.style.backgroundColor='white';
                     target.style.color='black';
-                    this.value='night';
+                    self.value='night';
 
                         var alist=document.querySelectorAll('a');
                         var i=0;
@@ -44,7 +37,19 @@
                         {alist[i].style.color='blue';
                         i=i+1}
                     }
-        ">
+             }
+        </script>
+    </head>
+
+    <body>
+
+        <h1><a href="WEB.html" target="_blank">WEB</a></h1>
+
+    <div ID="grid">
+
+        <div class="class1">
+
+       <input type="button" value="night" onclick="NightDayHandler(this);">
 
         <ol>
             <li><a href="WEB-HTML .html" target="_blank">HTML</a></li>
@@ -87,3 +92,4 @@
     </body>
 
 </html> 
+
